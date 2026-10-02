@@ -4,11 +4,13 @@
   flex-direction: column;
 }
 
-
-
+aside {
+  border: 2px blue solid;
+}
 .base2 {
-    
+  display: flex;
+  border: 2px  green solid;
 }
 .navbar {
+  border:  4px black solid;
 }
-
