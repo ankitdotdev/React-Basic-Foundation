@@ -1,7 +1,16 @@
+body {
+  margin: 0;
+}
+
 .container {
   border: 2px red solid;
   display: flex;
   flex-direction: column;
+  height: 80vh;
+}
+
+li {
+  list-style: none;
 }
 
 aside {
@@ -9,12 +18,36 @@ aside {
 }
 .base2 {
   display: flex;
-  border: 2px  green solid;
+  border: 2px blue solid;
+  height: 100%;
 }
 
-.base2 aside{
+.base2 aside {
   flex: 0 0 15%;
 }
 .navbar {
-  border:  4px black solid;
+  display: flex;
+  align-items: center;
+  border: 4px black solid;
+}
+
+.navbar h1 {
+  border: 2px green solid;
+  flex: 25%;
+  margin-left: 10px;
+}
+
+.navItems {
+  border: 2px purple solid;
+  flex: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sideBarItems {
+  border: 2px greenyellow solid;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
 }

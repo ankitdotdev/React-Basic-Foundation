@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: auto;
+  border: 4px peru solid;
+}
+
+.kpis {
+  border: 2px orangered solid;
+}
+
+.kpisSection {
+  border: 2px green solid;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.kpiCard {
+  border: 2px violet solid;
+  padding: 10px;
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
