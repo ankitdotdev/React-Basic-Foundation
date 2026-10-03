@@ -20,7 +20,7 @@ But the actual thought process is mine.
 
 ---
 
-## Try to Understand Before You Build
+# Try to Understand Before You Build
 
 Coming back to the topic.
 
@@ -52,7 +52,7 @@ Then start experimenting.
 
 ---
 
-## Think in Blocks
+# Think in Blocks
 
 If you can look at something and draw it, that's already a good start.
 
@@ -64,12 +64,12 @@ That's not the goal right now.
 
 Here, you need to play with:
 
-* What things need to be together?
-* What things should stay separate?
-* How should they connect?
-* What takes space?
-* What should contain what?
-* How does one part communicate with another?
+- What things need to be together?
+- What things should stay separate?
+- How should they connect?
+- What takes space?
+- What should contain what?
+- How does one part communicate with another?
 
 Basically, you need to start **connecting the dots**.
 
@@ -167,7 +167,7 @@ I don't have to create everything from scratch.
 
 ---
 
-## Think About the Requirement
+# Think About the Requirement
 
 I need a navbar.
 
@@ -203,10 +203,10 @@ Now here's where the framework you use starts becoming relevant.
 
 You might use:
 
-* React
-* Angular
-* Vue
-* or something else
+- React
+- Angular
+- Vue
+- or something else
 
 The concept remains similar.
 
@@ -304,13 +304,13 @@ If you've reached this point, you've already understood several important things
 
 You now understand:
 
-* How to look at a UI and break it into sections.
-* How to identify common HTML elements.
-* How to create a basic HTML structure.
-* How to group related elements together.
-* How a common Layout Wrapper can keep shared UI in one place.
-* How the main content can remain dynamic.
-* How to think about a page as a collection of sections and subsections.
+- How to look at a UI and break it into sections.
+- How to identify common HTML elements.
+- How to create a basic HTML structure.
+- How to group related elements together.
+- How a common Layout Wrapper can keep shared UI in one place.
+- How the main content can remain dynamic.
+- How to think about a page as a collection of sections and subsections.
 
 And this is going to make playing with CSS much more fun.
 
@@ -354,15 +354,15 @@ It answers:
 
 You divide your page into:
 
-* sections
-* subsections
-* navigation
-* sidebar
-* main content
-* buttons
-* forms
-* headings
-* etc.
+- sections
+- subsections
+- navigation
+- sidebar
+- main content
+- buttons
+- forms
+- headings
+- etc.
 
 ### CSS
 
@@ -372,12 +372,12 @@ CSS answers:
 
 You decide:
 
-* where things should be
-* how much space they should take
-* how they should align
-* how big they should be
-* how much spacing they should have
-* how they should look
+- where things should be
+- how much space they should take
+- how they should align
+- how big they should be
+- how much spacing they should have
+- how they should look
 
 So:
 
@@ -405,19 +405,19 @@ Now look at the requirements:
 
 ```text
 Navbar
-    ↓
+   ↓
 Should be at the top
 
 Sidebar
-    ↓
+   ↓
 Should be on the left
 
 Main Content
-    ↓
+   ↓
 Should be on the right
 
 Sidebar + Main
-    ↓
+   ↓
 Should sit next to each other
 ```
 
@@ -441,15 +441,15 @@ You just need to get an **overview of the major concepts**.
 
 Learn enough to understand things like:
 
-* Box Model
-* Display
-* Positioning
-* Flexbox
-* Grid
-* Width and Height
-* Margin and Padding
-* Alignment
-* Spacing
+- Box Model
+- Display
+- Positioning
+- Flexbox
+- Grid
+- Width and Height
+- Margin and Padding
+- Alignment
+- Spacing
 
 Once you have that basic conceptual clarity, come back to your layout.
 
@@ -525,12 +525,12 @@ Now you can actually **see your boxes**.
 
 You can understand:
 
-* How big they are.
-* Where they start.
-* Where they end.
-* Which element contains which.
-* How much space they're taking.
-* Whether your layout is behaving the way you expected.
+- How big they are.
+- Where they start.
+- Where they end.
+- Which element contains which.
+- How much space they're taking.
+- Whether your layout is behaving the way you expected.
 
 Don't think of the border as decoration.
 
@@ -748,7 +748,6 @@ Then:
 ┌──────────────────────┐
 │        NAVBAR        │
 ├───────┬──────────────┤
-│       │              │
 │ SIDE  │    MAIN      │
 │       │              │
 └───────┴──────────────┘
@@ -760,7 +759,606 @@ And once that mental blueprint becomes clear, the code becomes much easier to re
 
 ---
 
-# Finally
+# Now The Real Challenge Starts
+
+Okay.
+
+Till now, we have mostly been talking about **how to think**.
+
+Now let's actually apply everything we have learned.
+
+The layout is ready.
+
+The basic HTML structure is ready.
+
+The CSS fundamentals are getting clearer.
+
+Now we're going to build the UI **section by section**.
+
+And this is important:
+
+> **Do not try to build the whole page at once.**
+
+We're going to take one section.
+
+Finish it.
+
+Understand it.
+
+Then move to the next one.
+
+---
+
+# Challenge 1 — Navbar
+
+Look at the Navbar.
+
+It has three major things:
+
+```text
+┌──────────────────────────────────────────────┐
+│ LOGO          SEARCH                 AVATAR  │
+└──────────────────────────────────────────────┘
+```
+
+Now stop.
+
+Don't write CSS yet.
+
+First ask yourself:
+
+- What are the three things here?
+- Which things are independent?
+- Which things belong together?
+- Which elements should take space?
+- Which elements should stay towards a particular side?
+
+You can already see that:
+
+```text
+Logo
+```
+
+is one section.
+
+While:
+
+```text
+Search + Avatar
+```
+
+can be treated as another group.
+
+So you might need a wrapper around those two.
+
+Now the challenge is:
+
+> **How do I position Logo on one side and Search + Avatar on the other side?**
+
+I'm not giving you the solution.
+
+Your hint is:
+
+> **Think about the Flexbox concepts you just learned.**
+
+You already know enough to start experimenting.
+
+Build it.
+
+Break it.
+
+Put borders everywhere if you need to.
+
+Then fix it.
+
+---
+
+# Challenge 2 — Sidebar
+
+Once the Navbar is done, move to the Sidebar.
+
+Now think about what a Sidebar actually contains.
+
+Something like:
+
+```text
+SIDEBAR
+│
+├── Dashboard
+├── Projects
+├── Analytics
+├── Users
+└── Settings
+```
+
+Your job is to create the list.
+
+Don't worry about making it beautiful yet.
+
+First create the structure.
+
+Then ask:
+
+> How should these items be arranged?
+
+Maybe vertically.
+
+Maybe there is some spacing between them.
+
+Maybe some items have icons.
+
+Maybe some items are grouped.
+
+Don't start adding complicated CSS.
+
+First understand the requirement.
+
+Then find the CSS concept that solves it.
+
+Again:
+
+> **Requirement → Concept → Experiment → Result**
+
+---
+
+# Challenge 3 — Main Content
+
+Now we're entering the actual main content.
+
+Don't look at the whole main section as one giant thing.
+
+Break it down.
+
+For example:
+
+```text
+MAIN
+│
+├── Header Section
+│
+├── KPI Section
+│
+└── Recent Projects
+```
+
+That's already much easier to think about.
+
+Now we're back to our original principle:
+
+> **Break the big thing into smaller things.**
+
+---
+
+# Challenge 4 — Main Header
+
+Start with the Header section.
+
+Look at what information needs to be displayed.
+
+Create the HTML structure first.
+
+Don't worry about perfect styling.
+
+Once the structure exists, ask:
+
+> How should these elements be positioned?
+
+Maybe they're next to each other.
+
+Maybe some are aligned to the right.
+
+Maybe some need their own space.
+
+Again, use the CSS concepts you've learned.
+
+Don't randomly apply Flexbox just because we're learning Flexbox.
+
+Ask what the **requirement** actually is.
+
+---
+
+# Challenge 5 — KPI Section
+
+Now comes the KPI section.
+
+Imagine:
+
+```text
+┌──────────┬──────────┬──────────┬──────────┐
+│   KPI 1  │   KPI 2  │   KPI 3  │   KPI 4  │
+└──────────┴──────────┴──────────┴──────────┘
+```
+
+Now this is where your Flexbox knowledge should start becoming more useful.
+
+You already know about:
+
+- `flex-direction`
+- `flex-wrap`
+- `flex-grow`
+- `flex-shrink`
+- `flex-basis`
+- `gap`
+- alignment
+- percentage-based flex sizing
+
+So don't ask:
+
+> "Which CSS should I copy?"
+
+Ask:
+
+> "What layout requirement do I have?"
+
+Then:
+
+> "Which Flexbox concept can solve this?"
+
+For example, maybe you want:
+
+```text
+4 cards → one row
+```
+
+But on a smaller screen:
+
+```text
+2 cards → first row
+2 cards → second row
+```
+
+And on mobile:
+
+```text
+1 card
+1 card
+1 card
+1 card
+```
+
+Now you have a **real requirement**.
+
+Go figure out which Flexbox concepts solve it.
+
+That's where the learning becomes useful.
+
+---
+
+# Challenge 6 — Recent Projects
+
+Now we come to the last section:
+
+```text
+Recent Projects
+```
+
+And here's where I want you to notice something important.
+
+Don't use Flexbox everywhere just because you've learned Flexbox.
+
+Look at the structure.
+
+You have something like:
+
+```text
+┌────────────┬──────────────┬──────────┐
+│ Category   │ Task         │ Status   │
+├────────────┼──────────────┼──────────┤
+│ XYZ        │ Backend      │ Active   │
+├────────────┼──────────────┼──────────┤
+│ Ecommerce  │ Frontend     │ Done     │
+├────────────┼──────────────┼──────────┤
+│ Analytics  │ Fullstack    │ Active   │
+└────────────┴──────────────┴──────────┘
+```
+
+This is a **table**.
+
+And a table has its own layout system.
+
+So don't immediately try to force Flexbox into it.
+
+Your challenge here is different.
+
+---
+
+# Table Layout Challenge
+
+Before continuing with the Recent Projects section:
+
+**Stop and learn the basics of CSS table layout.**
+
+Go through:
+
+- HTML table structure
+- `<table>`
+- `<thead>`
+- `<tbody>`
+- `<tr>`
+- `<th>`
+- `<td>`
+- `border-collapse`
+- `border-spacing`
+- `table-layout`
+- table width
+- column sizing
+- cell alignment
+
+You don't need to master tables.
+
+Just understand:
+
+> **How does the browser arrange table rows and columns?**
+
+Then come back and build the Recent Projects section yourself.
+
+Your first goal is simply:
+
+```text
+┌────────────┬──────────────┬──────────┐
+│ Category   │ Task         │ Status   │
+├────────────┼──────────────┼──────────┤
+│ XYZ        │ Backend      │ Active   │
+│ Ecommerce  │ Frontend     │ Done     │
+│ Analytics  │ Fullstack    │ Active   │
+└────────────┴──────────────┴──────────┘
+```
+
+Once you get the basic output, then start improving:
+
+- spacing
+- borders
+- alignment
+- column widths
+- typography
+- responsiveness
+
+One layer at a time.
+
+---
+
+# Don't Optimize Yet
+
+This part is extremely important.
+
+At this stage, **I don't care if your code is ugly**.
+
+I don't care if:
+
+- You used too many `div`s.
+- Your CSS is repetitive.
+- Your naming isn't perfect.
+- You used a property that could be replaced with something cleaner.
+- Your component could be structured better.
+- Your CSS could be reduced.
+
+Not yet.
+
+Your first goal is:
+
+> **Make the output you wanted.**
+
+That's it.
+
+If your solution is ugly but it works, **you learned something**.
+
+If your solution is clean but you copied it without understanding it, you learned almost nothing.
+
+So first:
+
+```text
+Make it work.
+```
+
+Then:
+
+```text
+Understand why it works.
+```
+
+Then:
+
+```text
+Improve it.
+```
+
+Then:
+
+```text
+Optimize it.
+```
+
+That's the order.
+
+---
+
+# Then Comes Optimization
+
+Once you've completed the entire UI, now we can go back.
+
+Now you can ask:
+
+- Can I remove unnecessary CSS?
+- Can I simplify the selectors?
+- Am I using the correct layout system?
+- Can I make the component structure cleaner?
+- Can I reuse something?
+- Am I using the right semantic HTML?
+- Can I make the CSS more maintainable?
+- Can I improve responsiveness?
+- Is there a better way to achieve the same result?
+
+**This is where optimization belongs.**
+
+Not at the beginning.
+
+If you try to write perfect code before you understand what you're building, you'll spend more time worrying about the code than actually learning.
+
+---
+
+# The Real Challenge
+
+The actual challenge isn't:
+
+> "Can you build this UI?"
+
+The real challenge is:
+
+> **"Can you figure out how to build this UI without someone handing you the solution?"**
+
+That's what I want you to practice.
+
+You can get the answer wrong.
+
+You can write terrible CSS.
+
+You can spend 30 minutes fighting with Flexbox.
+
+You can break the entire layout.
+
+That's fine.
+
+Try again.
+
+Because every time you solve one of these problems, you're building a mental connection.
+
+```text
+Requirement
+     ↓
+What am I trying to achieve?
+     ↓
+What is controlling this?
+     ↓
+Which concept do I need?
+     ↓
+Experiment
+     ↓
+Result
+     ↓
+Why did it behave like this?
+     ↓
+Adjust
+     ↓
+Solve
+```
+
+That process is more valuable than memorizing 100 CSS properties.
+
+---
+
+# And This Is Where You Start Growing
+
+At the beginning, you're going to think:
+
+> "How the hell do I build this?"
+
+Then after solving it once:
+
+> "Okay, I understand this."
+
+Then you build something similar again:
+
+> "Oh, I know what concept I need here."
+
+Then again:
+
+> "I've seen this pattern before."
+
+And eventually:
+
+> "I don't even need to think about it anymore."
+
+You just build it.
+
+That's how fundamentals become intuition.
+
+And that's what we're trying to create here.
+
+---
+
+# Even With AI
+
+And this is where AI becomes interesting.
+
+You don't have to stop using AI.
+
+Use it.
+
+Ask it questions.
+
+Challenge it.
+
+Give it your code.
+
+Ask it why something is happening.
+
+Ask for hints.
+
+Ask it to explain a concept.
+
+But the important thing is:
+
+> **You should know what you're asking.**
+
+If AI gives you:
+
+```tsx
+<div className="flex justify-between items-center">
+```
+
+you shouldn't just think:
+
+> "Cool, it works."
+
+You should be able to think:
+
+> "Okay, I understand why this parent needs a flex layout, why the children need to be distributed, and what those classes are doing."
+
+That's the difference.
+
+If you understand **what and why**, AI becomes a tool.
+
+If you don't understand **what and why**, AI becomes a crutch.
+
+And we don't want that.
+
+---
+
+# Your Challenge Flow
+
+So from this point forward, follow this order:
+
+```text
+1. Draw the section
+        ↓
+2. Understand the requirement
+        ↓
+3. Build the HTML structure
+        ↓
+4. Identify the layout problem
+        ↓
+5. Find the CSS concept
+        ↓
+6. Experiment yourself
+        ↓
+7. Use borders to debug
+        ↓
+8. Get the output working
+        ↓
+9. Understand why it works
+        ↓
+10. Move to the next section
+        ↓
+11. Finish the whole UI
+        ↓
+12. Come back and optimize
+```
+
+Don't skip steps just because you want to finish faster.
+
+---
+
+# Final Thought
 
 Don't rush this.
 
@@ -774,25 +1372,25 @@ Start with:
 
 ```text
 Draw
- ↓
+  ↓
 Understand
- ↓
+  ↓
 Break into sections
- ↓
+  ↓
 Choose HTML elements
- ↓
+  ↓
 Build the structure
- ↓
+  ↓
 Identify layout requirements
- ↓
+  ↓
 Learn the CSS concept
- ↓
+  ↓
 Experiment
- ↓
+  ↓
 Debug with borders
- ↓
+  ↓
 Understand
- ↓
+  ↓
 Move to the next layer
 ```
 
@@ -810,6 +1408,32 @@ Then frameworks like Tailwind, component libraries, animations, responsive desig
 
 But first...
 
-**Build the skeleton.**
+# **Build the skeleton.**
 
-And enjoy the process.
+And then build it again.
+
+And again.
+
+And again.
+
+Because eventually, the thing you were struggling to understand becomes something you don't even have to think about anymore.
+
+You just **build.**
+
+And even when you use AI, you know **what you're asking, why you're asking it, and where that answer fits into your architecture.**
+
+That's the special part.
+
+That's the growth.
+
+And yeah...
+
+Even if you don't like struggling with it,
+
+**you don't really have much of a choice. 😂**
+
+You have to do it.
+
+So...
+
+**Go build.**
