@@ -1,4 +1,4 @@
-.base {
+.container {
   border: 2px red solid;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,10 @@ aside {
 .base2 {
   display: flex;
   border: 2px  green solid;
+}
+
+.base2 aside{
+  flex: 0 0 15%;
 }
 .navbar {
   border:  4px black solid;
