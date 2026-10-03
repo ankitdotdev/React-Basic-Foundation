@@ -6,7 +6,7 @@ body {
   border: 2px red solid;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
 }
 
 li {

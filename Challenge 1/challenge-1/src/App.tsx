@@ -27,7 +27,36 @@ const App = () => {
           </ul>
         </div>
         {/* Recent Projects Section */}
-        <div className={`${content.recent}`}></div>
+        <div className={`${content.recent}`}>
+          <h3>Recent Projects</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Task</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XYZ</td>
+                <td>Backend</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>Ecommerce</td>
+                <td>Frontend</td>
+                <td>Done</td>
+              </tr>
+
+              <tr>
+                <td>Analytics</td>
+                <td>Fullstack</td>
+                <td>Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </LayoutWrapper>
   );

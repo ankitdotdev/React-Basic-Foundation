@@ -8,6 +8,10 @@
   border: 2px orangered solid;
 }
 
+.header {
+  border: 2px gray solid;
+  margin-left: 20px;
+}
 .kpisSection {
   border: 2px green solid;
   display: flex;
@@ -16,11 +20,34 @@
 }
 
 .kpiCard {
-  border: 2px violet solid;
+  border: 4px violet solid;
   padding: 10px;
   flex: 0 0 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.recent {
+  border: 2px black solid;
+  height: auto
+}
+
+.recent h3 {
+  margin-left: 5px;
+}
+
+table {
+  border: 2px darkorange solid;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 5px;
+}
+
+td,
+th {
+  border: 1px black solid;
+  padding: 5px;
+  text-align: center;
 }
