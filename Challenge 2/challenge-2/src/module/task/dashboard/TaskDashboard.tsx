@@ -1,5 +1,6 @@
-import React from "react";
 import DashboardHeader from "./components/DashboardHeader";
+import TaskSection from "./components/TaskSection";
+import { TaskConstants, TasksColumns } from "./constants/Tasks.constants";
 
 const TaskDashboard = () => {
   return (
@@ -8,7 +9,7 @@ const TaskDashboard = () => {
       <DashboardHeader />
 
       {/* Task List Section */}
-      <div>Task List</div>
+      <TaskSection tasks={TaskConstants} taskColumns={TasksColumns} />
     </div>
   );
 };

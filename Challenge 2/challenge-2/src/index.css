@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px 50px;
+  border: 1px solid;
+}
