@@ -1,22 +1,21 @@
 .container {
   border: 2px solid black;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-height: 12vh;
+  justify-content: space-between;
+  padding: 16px 24px;
 }
 
-.logo {
-  /* border: 2px solid green; */
-  flex: 0 0 65%;
-  margin-left: 5px;
-}
+/* .logo {
+  border: 2px solid green;
+} */
 
 .navItems {
   /* border: 2px solid orange; */
   display: flex;
-  flex: 1;
-  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+  justify-content: space-between;
 }
-
-
