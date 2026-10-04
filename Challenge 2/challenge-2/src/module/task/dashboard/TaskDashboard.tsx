@@ -1,10 +1,11 @@
 import React from "react";
+import DashboardHeader from "./components/DashboardHeader";
 
 const TaskDashboard = () => {
   return (
     <div>
       {/* Task Kpi Section */}
-      <div>Tasks KPI</div>
+      <DashboardHeader />
 
       {/* Task List Section */}
       <div>Task List</div>
