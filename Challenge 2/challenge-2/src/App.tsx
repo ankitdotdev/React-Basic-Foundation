@@ -1,10 +1,11 @@
 import React from "react";
 import LayoutWrapper from "./component/layout/layout";
+import TaskDashboard from "./module/task/dashboard/TaskDashboard";
 
 const App = () => {
   return (
     <LayoutWrapper>
-      <h1>Hello World</h1>
+      <TaskDashboard />
     </LayoutWrapper>
   );
 };
