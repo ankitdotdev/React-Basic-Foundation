@@ -1,14 +1,9 @@
-import React from "react";
 import Table from "../../../../component/table/Table";
-import type { Tasks } from "../types/Tasks";
+import { TaskConstants, TasksColumns } from "../constants/Tasks.constants";
 
-interface TaskSectionProps {
-  tasks: Tasks[];
-  taskColumns: any[];
-}
 import task from "../task.dashboard.module.css";
 
-const TaskSection: React.FC<TaskSectionProps> = ({ tasks, taskColumns }) => {
+const TaskSection = () => {
   return (
     <div className={`${task.tableSection}`}>
       <div className={`${task.taskHeader}`}>
@@ -16,7 +11,7 @@ const TaskSection: React.FC<TaskSectionProps> = ({ tasks, taskColumns }) => {
         <button>+ Add Task</button>
       </div>
       <div className={`${task.tableArea}`}>
-        <Table columnsDef={taskColumns} data={tasks} />
+        <Table columnsDef={TasksColumns} data={TaskConstants} />
       </div>
     </div>
   );

@@ -1,9 +1,7 @@
+import type { ColumnType } from "../../../../component/table/Table";
 import type { Tasks } from "../types/Tasks";
 
-export const TasksColumns: {
-  label: string;
-  key: string;
-}[] = [
+export const TasksColumns: ColumnType<Tasks>[] = [
   {
     label: "Sr no",
     key: "id",
