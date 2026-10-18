@@ -66,11 +66,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px;
 }
 
 .modelContent {
-  background-color: black;
-  padding: 10px;
   border-radius: 12px;
   width: 90%;
   max-width: 500px;

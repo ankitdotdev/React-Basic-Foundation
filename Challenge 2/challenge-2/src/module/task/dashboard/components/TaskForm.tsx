@@ -3,13 +3,14 @@ import { RxCross2 } from "react-icons/rx";
 
 import taskForm from "./TaskForm.module.css";
 import type { Tasks } from "../types/Tasks";
+import InputField from "../../../../component/input/InputField";
 
 interface TasFormProps {
   onClick: (tasks: Tasks) => void;
   onClose: () => void;
 }
 
-const TaskForm: React.FC<TasFormProps> = ({ onClick ,onClose}) => {
+const TaskForm: React.FC<TasFormProps> = ({ onClick, onClose }) => {
   const [task, setTasks] = useState<Tasks>({
     id: 0,
     name: "",
@@ -47,13 +48,14 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick ,onClose}) => {
   };
   return (
     <div className={`${taskForm.container}`}>
+      <h3>New Task</h3>
       <form onSubmit={handleSubmit}>
         <div className={`${taskForm.cross}`} onClick={() => onClose()}>
           <span className={`${taskForm.tooltip}`}>Close</span>
           <RxCross2 />
         </div>
-        <div>
-          <div className={`${taskForm.fields}`}>
+        <div className={`${taskForm.formInputs}`}>
+          {/* <div className={`${taskForm.fields}`}>
             <label htmlFor="">Task</label>
             <input
               type="text"
@@ -62,40 +64,34 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick ,onClose}) => {
               onChange={(e) => handleChange("name", e)}
               className={`${taskForm.inputField}`}
             />
-          </div>
+          </div> */}
+          <InputField
+            label="Task"
+            type="text"
+            name={"name"}
+            onChange={(field, e) => handleChange(field, e)}
+          />
 
-          <div className={`${taskForm.fields}`}>
-            <label htmlFor="">Priorty</label>
-            <input
-              type="text"
-              id="priorty"
-              value={task.priorty}
-              onChange={(e) => handleChange("priorty", e)}
-              className={`${taskForm.inputField}`}
-            />
-          </div>
+          <InputField
+            label="Priorty"
+            type="text"
+            name={"priorty"}
+            onChange={(field, e) => handleChange(field, e)}
+          />
 
-          <div className={`${taskForm.fields}`}>
-            <label htmlFor="">Status</label>
-            <input
-              type="text"
-              id="status"
-              value={task.status}
-              onChange={(e) => handleChange("status", e)}
-              className={`${taskForm.inputField}`}
-            />
-          </div>
+          <InputField
+            label="Status"
+            type="text"
+            name={"status"}
+            onChange={(field, e) => handleChange(field, e)}
+          />
 
-          <div className={`${taskForm.fields}`}>
-            <label htmlFor="">Due Date</label>
-            <input
-              type="text"
-              id="status"
-              value={task.dueDate}
-              onChange={(e) => handleChange("dueDate", e)}
-              className={`${taskForm.inputField}`}
-            />
-          </div>
+          <InputField
+            label="Due Date"
+            type="text"
+            name={"dueDate"}
+            onChange={(field, e) => handleChange(field, e)}
+          />
         </div>
 
         <button>Submit</button>
