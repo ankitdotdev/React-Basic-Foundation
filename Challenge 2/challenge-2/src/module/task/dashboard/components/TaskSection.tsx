@@ -12,24 +12,32 @@ const TaskSection = () => {
   useEffect(() => {
     console.log("The value of the show is", tasks);
   }, [tasks]);
+
+  const handleTasks = (task: Tasks) => {
+    if(!task){
+      
+    }
+    setTasks((prev) => [
+      ...prev,
+      {
+        ...task,
+        id: prev.length + 1,
+      },
+    ]);
+    setShow(false);
+
+  };
   return (
     <>
       {show && (
         <div className={`${task.modelBackdrop}`}>
-        <div className={`${task.modelContent}`}>
-          <TaskForm
-            onClick={(task) => {
-              setTasks((prev) => [
-                ...prev,
-                {
-                  ...task,
-                  id: prev.length + 1,
-                },
-              ]);
-              setShow(false);
-            }}
-          />
-        </div>
+          <div className={`${task.modelContent}`}>
+            <TaskForm
+              onClick={(task) => {
+                handleTasks(task);
+              }}
+            />
+          </div>
         </div>
       )}
       <div className={`${task.tableSection}`}>
