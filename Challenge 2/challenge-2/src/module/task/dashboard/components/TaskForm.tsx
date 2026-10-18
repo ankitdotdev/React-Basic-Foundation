@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 import taskForm from "./TaskForm.module.css";
 import type { Tasks } from "../types/Tasks";
@@ -46,6 +47,10 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick }) => {
   return (
     <div className={`${taskForm.container}`}>
       <form onSubmit={handleSubmit}>
+        <div className={`${taskForm.cross}`} onClick={() => onClick(task)}>
+          <span className={`${taskForm.tooltip}`}>Close</span>
+          <RxCross2 />
+        </div>
         <div>
           <div className={`${taskForm.fields}`}>
             <label htmlFor="">Task</label>

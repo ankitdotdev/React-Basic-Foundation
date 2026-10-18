@@ -1,5 +1,6 @@
 .container {
   background-color: gray;
+  position: relative;
 }
 
 label {
@@ -14,3 +15,42 @@ label {
   gap: 20px;
 }
 
+.cross {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.cross:hover {
+  color: rgb(43, 42, 42);
+}
+
+.cross:hover .tooltip {
+  visibility: visible;
+}
+
+.tooltip {
+  background-color: black;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  right: 15px;
+  top: 150%;
+  visibility: hidden;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 0;
+  border-style: solid;
+  border-width: 6px 12px 6px 6px;
+  border-color: transparent;
+  border-right-color: black;
+}
