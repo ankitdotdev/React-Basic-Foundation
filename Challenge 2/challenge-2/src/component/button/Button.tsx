@@ -5,6 +5,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "danger" | "reset";
   onClick?: () => void;
   disabled?: boolean;
+  icon?: React.ReactNode;
 }
 
 import styles from "./Button.module.css";
@@ -14,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
   variant = "primary",
   disabled = false,
+  icon,
 }) => {
   return (
     <button
@@ -22,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
       className={`${styles.button} ${styles[variant]}`}
       disabled={disabled}
     >
+      {icon && icon}
       {label}
     </button>
   );

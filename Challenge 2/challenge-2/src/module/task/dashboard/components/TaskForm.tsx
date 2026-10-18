@@ -5,6 +5,7 @@ import taskForm from "./TaskForm.module.css";
 import type { Tasks } from "../types/Tasks";
 import InputField from "../../../../component/input/InputField";
 import Button from "../../../../component/button/Button";
+import { FaPlus } from "react-icons/fa";
 
 interface TasFormProps {
   onClick: (tasks: Tasks) => void;
@@ -84,8 +85,12 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick, onClose }) => {
             onChange={(field, e) => handleChange(field, e)}
           />
         </div>
-
-        <Button type="submit" label="Add Task" variant="primary" />
+        <Button
+          icon={<FaPlus />}
+          type="submit"
+          label="Add Task"
+          variant="primary"
+        />
       </form>
     </div>
   );
