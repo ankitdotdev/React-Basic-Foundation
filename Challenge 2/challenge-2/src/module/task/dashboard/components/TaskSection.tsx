@@ -15,7 +15,8 @@ const TaskSection = () => {
   return (
     <>
       {show && (
-        <div>
+        <div className={`${task.modelBackdrop}`}>
+        <div className={`${task.modelContent}`}>
           <TaskForm
             onClick={(task) => {
               setTasks((prev) => [
@@ -28,6 +29,7 @@ const TaskSection = () => {
               setShow(false);
             }}
           />
+        </div>
         </div>
       )}
       <div className={`${task.tableSection}`}>
