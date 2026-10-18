@@ -51,7 +51,12 @@ label {
 }
 
 .formInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.formContainer {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: center;
 }

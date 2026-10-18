@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import taskForm from "./TaskForm.module.css";
 import type { Tasks } from "../types/Tasks";
 import InputField from "../../../../component/input/InputField";
+import Button from "../../../../component/button/Button";
 
 interface TasFormProps {
   onClick: (tasks: Tasks) => void;
@@ -48,23 +49,13 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick, onClose }) => {
   };
   return (
     <div className={`${taskForm.container}`}>
-      <h3>New Task</h3>
-      <form onSubmit={handleSubmit}>
+      <h2>New Task</h2>
+      <form onSubmit={handleSubmit} className={`${taskForm.formContainer}`}>
         <div className={`${taskForm.cross}`} onClick={() => onClose()}>
           <span className={`${taskForm.tooltip}`}>Close</span>
           <RxCross2 />
         </div>
         <div className={`${taskForm.formInputs}`}>
-          {/* <div className={`${taskForm.fields}`}>
-            <label htmlFor="">Task</label>
-            <input
-              type="text"
-              id="name"
-              value={task.name}
-              onChange={(e) => handleChange("name", e)}
-              className={`${taskForm.inputField}`}
-            />
-          </div> */}
           <InputField
             label="Task"
             type="text"
@@ -94,7 +85,7 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick, onClose }) => {
           />
         </div>
 
-        <button>Submit</button>
+        <Button type="submit" label="Add Task" variant="primary" />
       </form>
     </div>
   );

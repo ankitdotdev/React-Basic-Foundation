@@ -25,7 +25,7 @@ const InputField: React.FC<InputFieldProps> = ({
 
   return (
     <div className={`${styles.inputContainer}`}>
-      <label>{label}</label>
+      <label className={`${styles.label}`}>{label}</label>
       <input
         type={type}
         id={field}
