@@ -6,9 +6,10 @@ import type { Tasks } from "../types/Tasks";
 
 interface TasFormProps {
   onClick: (tasks: Tasks) => void;
+  onClose: () => void;
 }
 
-const TaskForm: React.FC<TasFormProps> = ({ onClick }) => {
+const TaskForm: React.FC<TasFormProps> = ({ onClick ,onClose}) => {
   const [task, setTasks] = useState<Tasks>({
     id: 0,
     name: "",
@@ -47,7 +48,7 @@ const TaskForm: React.FC<TasFormProps> = ({ onClick }) => {
   return (
     <div className={`${taskForm.container}`}>
       <form onSubmit={handleSubmit}>
-        <div className={`${taskForm.cross}`} onClick={() => onClick(task)}>
+        <div className={`${taskForm.cross}`} onClick={() => onClose()}>
           <span className={`${taskForm.tooltip}`}>Close</span>
           <RxCross2 />
         </div>

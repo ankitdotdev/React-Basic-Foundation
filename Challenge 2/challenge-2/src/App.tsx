@@ -1,12 +1,14 @@
-import React from "react";
 import LayoutWrapper from "./component/layout/layout";
 import TaskDashboard from "./module/task/dashboard/TaskDashboard";
+import { Toast } from "radix-ui";
 
 const App = () => {
   return (
-    <LayoutWrapper>
-      <TaskDashboard />
-    </LayoutWrapper>
+    <Toast.Provider>
+      <LayoutWrapper>
+        <TaskDashboard />
+      </LayoutWrapper>
+    </Toast.Provider>
   );
 };
 
